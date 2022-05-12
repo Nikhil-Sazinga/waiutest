@@ -1,0 +1,379 @@
+<html>
+<head>
+<title>TestNG:  Users_Page_Testcases</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Users_Page_Testcases</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue May 10 15:53:40 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>232 seconds (232596 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_records_displayed()'><b>Check_records_displayed</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body/app-root[1]/app-layout[1]/section[1]/div[1]/app-admin[1]/app-user[1]/div[2]/div[1]/app-grid[1]/div[1]/p-table[1]/div[1]/p-paginator[1]/div[1]/p-dropdown[1]&quot;}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;
+System info: host: &apos;DESKTOP-P4GJM8J&apos;, ip: &apos;192.168.0.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Ramesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bc28957be56169003e667694ed34a15
+*** Element info: {Using=xpath, value=//body/app-root[1]/app-layout[1]/section[1]/div[1]/app-admin[1]/app-user[1]/div[2]/div[1]/app-grid[1]/div[1]/p-table[1]/div[1]/p-paginator[1]/div[1]/p-dropdown[1]}
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at Testcases2.Users_Page_Testcases.Check_records_displayed(Users_Page_Testcases.java:314)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace43473566", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace43473566'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//body/app-root[1]/app-layout[1]/section[1]/div[1]/app-admin[1]/app-user[1]/div[2]/div[1]/app-grid[1]/div[1]/p-table[1]/div[1]/p-paginator[1]/div[1]/p-dropdown[1]&quot;}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-alpha-4&apos;, revision: &apos;c2d955b49e&apos;
+System info: host: &apos;DESKTOP-P4GJM8J&apos;, ip: &apos;192.168.0.161&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Ramesh\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bc28957be56169003e667694ed34a15
+*** Element info: {Using=xpath, value=//body/app-root[1]/app-layout[1]/section[1]/div[1]/app-admin[1]/app-user[1]/div[2]/div[1]/app-grid[1]/div[1]/p-table[1]/div[1]/p-paginator[1]/div[1]/p-dropdown[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at Testcases2.Users_Page_Testcases.Check_records_displayed(Users_Page_Testcases.java:314)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Clear_functinality_for_Search_field()'><b>Clear_functinality_for_Search_field</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td><div><pre>java.lang.AssertionError: null
+	at Testcases2.Users_Page_Testcases.Clear_functinality_for_Search_field(Users_Page_Testcases.java:167)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace235154585", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace235154585'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.assertNotEquals(Assert.java:758)
+	at org.testng.Assert.assertNotEquals(Assert.java:763)
+	at Testcases2.Users_Page_Testcases.Clear_functinality_for_Search_field(Users_Page_Testcases.java:167)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>25</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Add_Users_button_display()'><b>Add_Users_button_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Add_Users_icon_display()'><b>Add_Users_icon_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Add_new_user()'><b>Add_new_user</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>22</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Back_to_list_button_clickable()'><b>Back_to_list_button_clickable</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>5</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Back_to_list_button_display()'><b>Back_to_list_button_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>10</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Back_to_list_button_on_User_Profile_Page()'><b>Back_to_list_button_on_User_Profile_Page</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_Add_Users_button_Functionality()'><b>Check_Add_Users_button_Functionality</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>5</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_Add_Users_icon_Functionality()'><b>Check_Add_Users_icon_Functionality</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>10</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_Admin_menu_clickable()'><b>Check_Admin_menu_clickable</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>5</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_Back_to_list_button_Functinality_on_User_Profile_Page()'><b>Check_Back_to_list_button_Functinality_on_User_Profile_Page</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>5</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_Roles_dropdown_clickable_and_select_value_from_dropdown()'><b>Check_Roles_dropdown_clickable_and_select_value_from_dropdown</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_Roles_field_display()'><b>Check_Roles_field_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_user_webpage_title()'><b>Check_user_webpage_title</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_users_menu_Clickable()'><b>Check_users_menu_Clickable</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>5</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Check_users_menu_display()'><b>Check_users_menu_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Clear_functinality_for_roles_and_Search_field()'><b>Clear_functinality_for_roles_and_Search_field</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>10</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Clear_functinality_for_roles_field()'><b>Clear_functinality_for_roles_field</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>10</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Roles_field_label_text()'><b>Roles_field_label_text</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Search_button_display()'><b>Search_button_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Search_field_Display()'><b>Search_field_Display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Search_field_Placeholder()'><b>Search_field_Placeholder</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>17</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Search_field_editable()'><b>Search_field_editable</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>14</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Admin_Option()'><b>Select_Admin_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Back_Office_Option()'><b>Select_Back_Office_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Customer_Option()'><b>Select_Customer_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Merchant_Option()'><b>Select_Merchant_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Partner_Option()'><b>Select_Partner_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Staff_Option()'><b>Select_Staff_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_SuperAdmin_Option()'><b>Select_SuperAdmin_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Select_Support_Option()'><b>Select_Support_Option</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.Update_button_functionality_on_User_Profile_page()'><b>Update_button_functionality_on_User_Profile_page</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>38</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.check_Users_page_header()'><b>check_Users_page_header</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.edit_User_icon_display()'><b>edit_User_icon_display</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>0</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.edit_user_icon_functionality()'><b>edit_user_icon_functionality</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>5</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.login()'><b>login</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>11</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+<tr>
+<td title='Testcases2.Users_Page_Testcases.search_functionality()'><b>search_functionality</b><br>Test class: Testcases2.Users_Page_Testcases</td>
+<td></td>
+<td>7</td>
+<td>Testcases2.Users_Page_Testcases@24569dba</td></tr>
+</table><p>
+</body>
+</html>

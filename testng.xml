@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  
+    <!--   <test name="Login_page_Testcases">
+    <classes>
+      
+      <class name="Testcases2.Login_page_Testcases"/>
+      </classes>
+     </test>    
+     
+       <test name="Users_Page_Testcases">
+    <classes>
+      
+      <class name="Testcases2.Users_Page_Testcases"/>
+      </classes>
+     </test>  
+     
+      <test name="Admin_Merchants_Reastaurant_Page_Testcases">
+    <classes>
+      
+      <class name="Testcases2.Admin_Merchants_Reastaurant_Page_Testcases"/>
+      </classes>
+     </test>      -->
+      
+      
+        <test name="Admin_Merchants_Hotel_Page_Testcases">
+    <classes>
+      
+      <class name="Testcases2.Admin_Merchants_Hotel_Page_Testcases"/>
+      </classes>
+     </test>   
+     
+    <!-- 
+     <test name="Admin_Lenders_Testcases">
+    <classes>
+      
+      <class name="Testcases2.Admin_Lenders_Testcases"/>
+      </classes>
+     </test>  
+     
+     <test name="Admin_Partners_Testcases">
+    <classes>
+      
+      <class name="Testcases2.Admin_Partners_Testcases"/>
+      </classes>
+     </test>  
+      
+     
+       <test name="MerchantMenu_Transactions_Testcases">
+    <classes>
+      
+      <class name="Testcases2.MerchantMenu_Transactions_Testcases"/>
+      </classes>
+     </test>  
+     
+      <test name="MerchantMenu_Customer_Testcases">
+    <classes>
+      
+      <class name="Testcases2.MerchantMenu_Customer_Testcases"/>
+      </classes>
+     </test> 
+     
+     <test name="MerchantMenu_Staff_Testcases">
+    <classes>
+      
+      <class name="Testcases2.MerchantMenu_Staff_Testcases"/>
+      </classes>
+     </test>   
+      --> 
+     
+</suite> <!-- Suite -->
