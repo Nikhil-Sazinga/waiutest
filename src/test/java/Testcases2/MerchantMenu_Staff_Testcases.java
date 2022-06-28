@@ -14,8 +14,8 @@ public class MerchantMenu_Staff_Testcases extends MerchantMenu_Staff_Locators {
 			public void Login() throws InterruptedException {
 				dr.get(url);
 				Thread.sleep(6000);
-				dr.findElement(Username_field).sendKeys("bluefire");
-				dr.findElement(Password_field).sendKeys("bluefire@123");
+				dr.findElement(Username_field).sendKeys("Ramesh");
+				dr.findElement(Password_field).sendKeys("12345678");
 				dr.findElement(LogIn_Button).click();
 				Thread.sleep(6000);
 				String actual=dr.findElement(Dashboard_menu).getText();
@@ -65,7 +65,7 @@ public class MerchantMenu_Staff_Testcases extends MerchantMenu_Staff_Locators {
 			@Test(priority =5)
 			public void Check_Staff_webpage_title() {
 				String Actual_Staff_webpage_title=dr.getTitle();
-				String Expected_Staff_webpage_title="WAIU - Staff Members (v-1.0.6)";
+				String Expected_Staff_webpage_title="WAIU - Staff Members (v-1.0.5)";
 				Assert.assertEquals(Actual_Staff_webpage_title, Expected_Staff_webpage_title);		
 			}
 			

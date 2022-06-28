@@ -28,10 +28,16 @@ public class MerchantMenu_Customer_Locators extends Testbase2{
 	public By End_Date_Label=By.xpath("//label[contains(text(),'End Date')]");
 	public By End_Date=By.xpath("//input[@id='endDate']");
 	
-	public By Search_field=By.name("search");
-	public By Search_icon=By.xpath("//body/app-root[1]/app-layout[1]/section[1]/div[1]/app-merchant[1]/app-customer[1]/form[1]/div[1]/div[5]/span[1]/i[1]");
+	public By select_by_column_name_=By.xpath("//select[@id='searchColumn']");
+	
+	public By Search_field=By.name("searchTerm");
+	
+	public By Search_button=By.xpath("//button[contains(text(),'Search')]");
 	public By Clear_button=By.xpath("//button[contains(text(),'Clear')]");
 	
 	public By text_for_search_field=By.xpath("//tbody/tr[1]/td[2]");
+	public By view_customer_icon=By.xpath("//i[@class='fa fa-eye ng-star-inserted']");
+	
+	public By back_to_list_button=By.xpath("//a[@class='btn btn-secondary btn-sm btn']");
 
 }

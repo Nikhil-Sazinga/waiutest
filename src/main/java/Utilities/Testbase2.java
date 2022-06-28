@@ -38,7 +38,7 @@ public class Testbase2 {
     
     @BeforeTest
     public void launchbrowser() throws InterruptedException{
-   	 System.setProperty("webdriver.chrome.driver", "D:\\Ch\\Browser\\chromedriver\\chromedriver.exe");
+   	 System.setProperty("webdriver.chrome.driver", "E:\\Selenium apps\\chromedriver.exe");
    	 dr=new ChromeDriver();
    	 dr.manage().window().maximize();
    	 dr.get(url);

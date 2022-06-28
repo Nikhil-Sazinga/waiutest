@@ -7,412 +7,282 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Admin_Lenders_Testcases {
+import TestXpath.Admin_Lenders_Locators;
+
+public class Admin_Lenders_Testcases extends Admin_Lenders_Locators {
 
 	
 	//Login
-	@Test(priority = 0)
-	public void Login() throws InterruptedException {
-		dr.get(url);
-		Thread.sleep(6000);
-		dr.findElement(Username_field).sendKeys("bluefire");
-		dr.findElement(Password_field).sendKeys("bluefire@123");
-		dr.findElement(LogIn_Button).click();
-		Thread.sleep(6000);
-		String actual=dr.findElement(Dashboard_menu).getText();
-		String exppected="Dashboard";
-		if(actual.equals(exppected)) {
-			System.out.println("Login sucessfully");
-		}else {
-			System.out.println("Login unsucess");
-		}
-		
-	}
-	
-	/*
-	//Check admin menu display
-	@Test(priority = 0)
-	public void Check_Admin_menu_display() {
-		dr.findElement(Admin_menu).isDisplayed();
-	}
-	*/
-	
+			@Test(priority = 0)
+			public void Login() throws InterruptedException {
+				dr.get(url);
+				Thread.sleep(6000);
+				dr.findElement(Username_field).sendKeys("Ramesh");
+				dr.findElement(Password_field).sendKeys("12345678");
+				dr.findElement(LogIn_Button).click();
+				Thread.sleep(6000);
+				String actual=dr.findElement(Dashboard_menu).getText();
+				String exppected="Dashboard";
+				if(actual.equals(exppected)) {
+					System.out.println("Login sucessfully");
+				}else {
+					System.out.println("Login unsucess");
+				}
+				
+			}
+			
+			/*
+			//Check admin menu display
+			@Test(priority = 0)
+			public void Check_Admin_menu_display() {
+				dr.findElement(Admin_menu).isDisplayed();
+			}
+			*/
 	
 	//Check admin menu clickable
-	@Test(priority =1)
-	public void Check_Admin_menu_clickable() throws InterruptedException {
-		dr.findElement(Admin_menu).click();
-		Thread.sleep(5000);
-	}
-	
-	//Check Merchants menu display
-	@Test(priority =2)
-	public void Check_Merchants_menu_display() {
-		dr.findElement(Merchants_menu).isDisplayed();
-	}
-	
-	//Check Merchants menu clickable
-	@Test(priority=3)
-	public void Check_Merchants_menu_Clickable() throws InterruptedException {
-		dr.findElement(Merchants_menu).click();
-		Thread.sleep(5000);
-		
-	}
-	
-	//Check  Merchants webpage title
-	@Test(priority =4)
-	public void Check_Merchants_webpage_title() {
-		String Actual_Merchants_webpage_title=dr.getTitle();
-		String Expected_Merchants_webpage_title="WAIU - Merchants";
-		Assert.assertEquals(Actual_Merchants_webpage_title, Expected_Merchants_webpage_title);		
-	}
-	
-	
-	//Check Merchants page header
-    @Test(priority =5)
-    public void check_Merchants_page_header() {
-    	String Actual_page_header=dr.findElement(Merchants_pege_header).getText();
-    	String Expexted_page_header="Merchants";
-    	Assert.assertEquals(Actual_page_header, Expexted_page_header);
-    }
-    
-    //Check Merchants_field_label_text
-    @Test(priority =6)
-    public void Merchants_field_label_text() {
-    	String Merchants_field_label_actaul_text=dr.findElement(Merchant_field_Label).getText();
-    	String Expected_label="Merchant Type";
-    	Assert.assertEquals(Merchants_field_label_actaul_text, Expected_label);
-    }
-    
-    //Check_Merchants_field_display
-    @Test(priority =7)
-    public void Check_Merchant_field_display() {
-    	dr.findElement(Merchant_field).isDisplayed();
-     }
-    
-    
-    //Check placeholder text of Merchants_field
-    @Test(priority =8)
-    public void placeholder_text_of_Merchants_field() {
-    Select sel_merchant=new Select(dr.findElement(Merchant_field));
-    sel_merchant.selectByVisibleText("Select Type");
-	String default_Dropdown_text=sel_merchant.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Select Type";
-	System.out.println("Default option Text displayed in Merchants dropdown :"+default_Dropdown_text);
-	Assert.assertEquals(default_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-  //Check Reastaurant_option text of merchant_field
-    @Test(priority =9)
-    public void Select_Reastaurant_Merchant_Type() {
-    Select sel_merchant=new Select(dr.findElement(Merchant_field));
-    sel_merchant.selectByVisibleText("Restaurant");
-	String Selected_Dropdown_text=sel_merchant.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Restaurant";
-	System.out.println("Slected option Text displayed in merchant dropdown :"+Selected_Dropdown_text);
-	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-  //Check Hotel_option text of merchant_field
-    @Test(priority =10)
-    public void Select_Hotel_Merchant_Type() {
-    Select sel_merchant=new Select(dr.findElement(Merchant_field));
-    sel_merchant.selectByVisibleText("Hotel");
-	String Selected_Dropdown_text=sel_merchant.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Hotel";
-	System.out.println("Slected option Text displayed in merchant dropdown :"+Selected_Dropdown_text);
-	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-  //Check Status_field_label_text
-    @Test(priority =11)
-    public void Status_field_label_text() {
-    	String Status_field_label_actaul_text=dr.findElement(Status_field_Label).getText();
-    	String Status_field_label_Expected_text="Status";
-    	Assert.assertEquals(Status_field_label_actaul_text, Status_field_label_Expected_text);
-    }
-    
-    //Check_Status_field_display
-    @Test(priority =12)
-    public void Check_Status_field_display() {
-    	dr.findElement(Status_field).isDisplayed();
-     }
-    
-    
-    //Ckeck placeholder text of Status_field
-    @Test(priority =13)
-    public void placeholder_text_of_Status_field() {
-    Select sel_status=new Select(dr.findElement(Status_field));
-    sel_status.selectByVisibleText("Select Status");
-	String default_Dropdown_text=sel_status.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Select Status";
-	System.out.println("Default option Text displayed in Status dropdown :"+default_Dropdown_text);
-	Assert.assertEquals(default_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-  //Check Active_option text of Status_field
-    @Test(priority =14)
-    public void Select_Active_Status_Type() {
-    Select sel_merchant=new Select(dr.findElement(Status_field));
-    sel_merchant.selectByVisibleText("Active");
-	String Selected_Dropdown_text=sel_merchant.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Active";
-	System.out.println("Slected option Text displayed in Status dropdown :"+Selected_Dropdown_text);
-	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-  //Check In-Active_option text of Status_field
-    @Test(priority =15)
-    public void Select_InActive_Status_Type() {
-    Select sel_merchant=new Select(dr.findElement(Status_field));
-    sel_merchant.selectByVisibleText("In-Active");
-	String Selected_Dropdown_text=sel_merchant.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="In-Active";
-	System.out.println("Slected option Text displayed in merchant dropdown :"+Selected_Dropdown_text);
-	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-  //Check State_field_label_text
-    @Test(priority =16)
-    public void State_field_label_text() {
-    	String State_field_label_actaul_text=dr.findElement(State_field_Label).getText();
-    	String State_field_label_Expected_text="State";
-    	Assert.assertEquals(State_field_label_actaul_text, State_field_label_Expected_text);
-    }
-    
-    //Check_State_field_display
-    @Test(priority =17)
-    public void Check_State_field_display() {
-    	dr.findElement(State_field).isDisplayed();
-     }
-    
-    
-    //Ckeck placeholder text of State_field
-    @Test(priority =18)
-    public void placeholder_text_of_State_field() {
-    Select sel_status=new Select(dr.findElement(State_field));
-    sel_status.selectByVisibleText("Select State");
-	String default_Dropdown_text=sel_status.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Select State";
-	System.out.println("Default option Text displayed in State dropdown :"+default_Dropdown_text);
-	Assert.assertEquals(default_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-  //Check Select_option for state_field from_dropdownlist
-    @Test(priority =19)
-    public void Select_state_option_from_dropdownlist() {
-    Select sel_state=new Select(dr.findElement(State_field));
-    sel_state.selectByVisibleText("Maharashtra");
-	String Selected_Dropdown_text=sel_state.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Maharashtra";
-	System.out.println("Slected option Text displayed in State dropdown :"+Selected_Dropdown_text);
-	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-  //Check City_field_label_text
-    @Test(priority =20)
-    public void City_field_label_text() throws InterruptedException {
-    	Thread.sleep(7000);
-    	String City_field_label_actaul_text=dr.findElement(City_field_Label).getText();
-    	String City_field_label_Expected_text="City";
-    	Assert.assertEquals(City_field_label_actaul_text, City_field_label_Expected_text);
-    }
-    
-    //Check_City_field_display
-    @Test(priority =21)
-    public void Check_City_field_display() {
-    	dr.findElement(City_field).isDisplayed();
-     }
-    
-    
-    //Ckeck placeholder text of City_field
-    @Test(priority =22)
-    public void placeholder_text_of_City_field() {
-    Select sel_City=new Select(dr.findElement(City_field));
-    sel_City.selectByVisibleText("Select City");
-	String default_Dropdown_text=sel_City.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Select City";
-	System.out.println("Default option Text displayed in City dropdown :"+default_Dropdown_text);
-	Assert.assertEquals(default_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-  //Check Select_option for City_field from_dropdownlist
-    @Test(priority =23)
-    public void Select_City_option_from_dropdownlist() {
-    Select sel_city=new Select(dr.findElement(City_field));
-    sel_city.selectByVisibleText("Pune");
-	String Selected_Dropdown_text=sel_city.getFirstSelectedOption().getText();
-	String expected_value_in_dropdown="Pune";
-	System.out.println("Slected option Text displayed in City dropdown :"+Selected_Dropdown_text);
-	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
-    }
-    
-    
-    //Check_Search_field_display
-    @Test(priority =21)
-    public void Check_Searh_field_display() throws InterruptedException {
-    	Thread.sleep(7000);
-    	dr.findElement(Search_field1).isDisplayed();
-     }
-    
-    
-  //Check_Search_icon_display
-    @Test(priority =22)
-    public void Check_Searh_icon_display() {
-    	dr.findElement(Search_icon).isDisplayed();
-     }
-    
-    //Ckeck placeholder text of Search_field
-    @Test(priority =23)
-    public void placeholder_text_of_Search_field() throws InterruptedException {
-    Thread.sleep(10000);
-    
-    String Actual_text_in_search_field=dr.findElement(Search_field1).getText();
-    System.out.println("Placeholder of Search field :"+Actual_text_in_search_field+":");
-	String expected_text_in_search_field="Search Keyword";
-	System.out.println("Default Text displayed in Search :"+Actual_text_in_search_field);
-	Assert.assertEquals(Actual_text_in_search_field,expected_text_in_search_field);
-    }
-    
-    //Search functionality
-    @Test(priority =24)
-    public void Search_functionlity() {
-    	dr.findElement(Search_field1).sendKeys("1");
+			@Test(priority =1)
+			public void Check_Admin_menu_clickable() throws InterruptedException {
+				dr.findElement(Admin_menu).click();
+				Thread.sleep(5000);
+			}
+			
+			//Check Lenders  menu display
+			@Test(priority =2)
+			public void Check_Lenders_menu_display() {
+				dr.findElement(Lenders_menu).isDisplayed();
+			}
+			
+			//Check Lenders menu clickable
+			@Test(priority=3)
+			public void Check_Lenders_menu_Clickable() throws InterruptedException {
+				dr.findElement(Lenders_menu).click();
+				Thread.sleep(5000);
+				
+			}
+			
+			
+			//Check  Lenders  webpage title
+			@Test(priority =4)
+			public void Check_Lenders_webpage_title() {
+				String Actual_Lenders_webpage_title=dr.getTitle();
+				String Expected_Lenders_webpage_title="WAIU - Lenders (v-1.0.5)";
+				Assert.assertEquals(Actual_Lenders_webpage_title, Expected_Lenders_webpage_title);		
+			}
+			
+			
+			//Check Lenders page header
+		    @Test(priority =5)
+		    public void check_Lenders_page_header() {
+		    	String Actual_page_header=dr.findElement(Lenders_pege_header).getText();
+		    	String Expexted_page_header="Lenders";
+		    	Assert.assertEquals(Actual_page_header, Expexted_page_header);
+		    }
+		    
+		    
+		    //Check Add lender button display
+		    @Test(priority =7)
+		    public void Check_Add_lender_button_display() {
+		    	dr.findElement(Add_Lender_button).isDisplayed();
+		     }
+		    
+		    //Check Add lender icon display
+		    @Test(priority =8)
+		    public void Check_Add_lender_icon_display() {
+		    	dr.findElement(Add_Lender_icon).isDisplayed();
+		     }
+		    
+		    //Check Text of Add lender button
+		    @Test(priority =9)
+		    public void text_of_Add_lender_button() {
+		    
+			String Actual_text_add_partner_button=dr.findElement(Add_Lender_button).getText();
+			String expected_text_add_partner_button="Add Lender";
+			Assert.assertEquals(Actual_text_add_partner_button,expected_text_add_partner_button);
+		    }
+		    
+		  		    
+		  //Check edit lender icon display
+		    @Test(priority = 10)
+		    public void check_edit_lender_icon_display() throws InterruptedException{
+		    	Thread.sleep(7000);
+		    	dr.findElement(Edit_Lender).isDisplayed();
+		    }
+		    
+		  //Check edit lender icon clickable 
+		    @Test(priority = 11)
+		    public void check_edit_lensder_icon_clickable() throws InterruptedException{
+		    	dr.findElement(Edit_Lender).click();
+		    	Thread.sleep(7000);
+		    	String Actual_text=dr.findElement(edit_lender_page_header).getText();
+		    	String lender_name=dr.findElement(lender_name_Field_on_editpage).getAttribute("value");
+			    String Expected_text="Lender View: "+lender_name;
+			    Assert.assertEquals(Actual_text, Expected_text);
+		    	
+		    }
+		    
+		   		    
+		  //Check Update button display
+		    @Test(priority = 12)
+		    public void check_Update_button_display() throws InterruptedException{
+		    	Thread.sleep(5000);
+		    	JavascriptExecutor js = (JavascriptExecutor) dr;
+				js.executeScript("window.scrollBy(0,1000)");
+		    	dr.findElement(Update_button).isDisplayed();
+		    }
+		    
+		  //Check Update button clickable 
+		    @Test(priority = 13)
+		    public void check_Update_button_clickable() throws InterruptedException{
+		    	
+		    	dr.findElement(Update_button).click();
+		    	Thread.sleep(7000);
+		    	String Actual_text=dr.findElement(Lenders_pege_header).getText();
+			    String Expected_text="Lenders";
+			    Assert.assertEquals(Actual_text, Expected_text);
+		    	
+		    }
+		    
+		    
+		    //Check view lender icon display
+		    @Test(priority = 14)
+		    public void check_view_lender_icon_visibility() throws InterruptedException{
+		    	Thread.sleep(7000);
+		    	dr.findElement(View_Lender).isDisplayed();
+		    }
+		    
+		  //Check view lender icon clickable 
+		    @Test(priority = 15)
+		    public void check_view_lenser_icon_clickable() throws InterruptedException{
+		    	dr.findElement(View_Lender).click();
+		    	Thread.sleep(7000);
+		    	dr.findElement(view_lender_page_header).isDisplayed();
+			    dr.findElement(Back_to_list_button_on_viewlender).click();
+		    	
+		    }
+		    
+		    //Check Add lender icon display
+		    @Test(priority = 16)
+		    public void check_Add_lender_icon_display() throws InterruptedException{
+		    	Thread.sleep(5000);
+		    		dr.findElement(Add_Lender_icon).isDisplayed();
+		    }
+		    
+		  //Check Add lender icon clickable 
+		    @Test(priority = 17)
+		    public void check_Add_lender_icon_clickable() throws InterruptedException{
+		    	
+		    	dr.findElement(Add_Lender_icon).click();
+		    	Thread.sleep(7000);
+		    	String Actual_text=dr.findElement(Add_Lender_page_header).getText();
+			    String Expected_text="Lender View";
+			    Assert.assertEquals(Actual_text, Expected_text);
+			    dr.findElement(Back_to_list_button).click();	    	
+		    }  
+		    	    
+		    
+		   //Check Add lender button clickable 
+		    @Test(priority = 18)
+		    public void check_Add_lender_button_clickable() throws InterruptedException{
+		    	
+		    	dr.findElement(Add_Lender_button).click();
+		    	Thread.sleep(7000);
+		    	String Actual_text=dr.findElement(Add_Lender_page_header).getText();
+			    String Expected_text="Lender View";
+			    Assert.assertEquals(Actual_text, Expected_text);
+		    	
+		    }
+		    
+		    
+		    
+		  //Check save button display on add lender page
+		    @Test(priority = 19)
+		    public void check_save_button_display() throws InterruptedException{
+		    	JavascriptExecutor jsss = (JavascriptExecutor) dr;
+				jsss.executeScript("window.scrollBy(0,1000)");
+		    		dr.findElement(save_button).isDisplayed();
+		    		jsss.executeScript("window.scrollBy(0,-1000)");
+		    }
+		    
+		    
+		   
+		    //Check mandatory field contain message
+		    @Test(priority = 20)
+		    public void check_add_lender_form_field_contain_mandatory_message() throws InterruptedException {
+		    	JavascriptExecutor js = (JavascriptExecutor) dr;
+				js.executeScript("window.scrollBy(0,850)");
+				Thread.sleep(5000);
+		    	dr.findElement(save_button).click();
+		    	String Actual_lendername_required_msg=dr.findElement(lender_name_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_lendername_required_msg, "Lender Name is required.");
+		    	String Actual_Description_required_msg=dr.findElement(description_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_Description_required_msg, "Description is required.");
+		    	String Actual_termscondtion_required_msg=dr.findElement(termscondtion_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_termscondtion_required_msg, "Terms And Conditions are required.");
+		    	String Actual_website_required_msg=dr.findElement(website_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_website_required_msg, "Web site required.");
+		    	dr.findElement(website).sendKeys(invalid_website);
+		    	Thread.sleep(4000);
+		    	String Actual_website_proper_format=dr.findElement(website_properformat_element).getText();
+		    	Assert.assertEquals(Actual_website_proper_format, "Web site should be in proper format");
+		    	String Actual_contactperson_required_msg=dr.findElement(ContactPerson_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_contactperson_required_msg, "Contact Person required.");
+	        	String Actual_PrimaryContactNo_required_msg=dr.findElement(PrimaryContactNo_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_PrimaryContactNo_required_msg, "Primary Contact No. is required.");
+		    	dr.findElement(contactNumberPrimary).sendKeys(invalid_contactNo);
+		    	Thread.sleep(4000);
+		    	String Actual_PrimaryContactNo_10_digit_msg=dr.findElement(PrimaryContactNo_10_digit_required_element).getText();
+		    	Assert.assertEquals(Actual_PrimaryContactNo_10_digit_msg, "Please Enter 10 digit Mobile Number.");   	
+		    	String Actual_secondaryContactNo_required_msg=dr.findElement(SecondaryContactNo_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_secondaryContactNo_required_msg, "Secondary Contact No. is required.");
+		    	dr.findElement(contactNumberSecondry).sendKeys(invalid_contactNo);
+		    	Thread.sleep(4000);
+		    	String Actual_secondaryContactNo_10_digit_msg=dr.findElement(SecondaryContactNo_10_digit_required_element).getText();
+		    	Assert.assertEquals(Actual_secondaryContactNo_10_digit_msg, "Please Enter 10 digit Mobile Number.");
+		    	Thread.sleep(5000);
+		    	String Actual_email_required_msg=dr.findElement(email_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_email_required_msg, "Email ID is required.");
+		    	dr.findElement(email).sendKeys(invalid_email);
+		    	String Actual_validemail_msg=dr.findElement(valid_email_element).getText();
+		    	Assert.assertEquals(Actual_validemail_msg, "Please enter valid Email Id");		    	
+		    	String Actual_APIKey_required_msg=dr.findElement(API_key_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_APIKey_required_msg, "Api Key is required.");
+		    	
+		    	String Actual_API_secretkey_required_msg=dr.findElement(API_secret_mandatory_element).getText();
+		    	Assert.assertEquals(Actual_API_secretkey_required_msg, "Api Secret is required.");
+		    	
+		    }
+		    
+		    
+		   
+		  //Check Add lender functionality
+		    @Test(priority = 21)
+		    public void check_Add_lender_functionality() throws InterruptedException, AWTException{
+		        JavascriptExecutor js = (JavascriptExecutor) dr;
+				js.executeScript("window.scrollBy(0,-850)");
+				dr.findElement(Back_to_list_button_on_viewlender).click();
+		    	Thread.sleep(7000);
+		    	dr.findElement(Add_Lender_button).click();
+		    	Thread.sleep(5000);
+		    	 	dr.findElement(lender_name).sendKeys("AXIS Bank");
+		    	dr.findElement(Description).sendKeys("Vijay");
+		    	dr.findElement(termAndCondition).sendKeys("1111111112");
+		    	//upload logo file
+    	//Actions act=new Actions(dr);
+    	//act.moveToElement(dr.findElement(logo_upload_file));
+    	//act.click().build().perform(); 
     	
-    }
-    
-  //Check_Clear_field_display
-    @Test(priority =25)
-    public void Check_Clear_field_display() throws InterruptedException {
-    	Thread.sleep(10000);
-    	dr.findElement(Clear_Button).isDisplayed();
-     }
-    
-    
-
-    //Clear functionality
-    @Test(priority =25)
-    public void Clear_functionlity() throws InterruptedException {
-    	Thread.sleep(5000);
-    	dr.findElement(Search_field1).sendKeys("1");
-    	Thread.sleep(5000);
-    	String text_before_use_clear=dr.findElement(Search_field1).getText();
-    	System.out.println("Before use of clear text in search field :"+text_before_use_clear);
-    	dr.findElement(Clear_Button).click();
-    	Thread.sleep(3000);
-    	String text_after_use_clear=dr.findElement(Search_field1).getText();
-    	System.out.println("After use of clear text in search field :"+text_after_use_clear);
-    	Assert.assertNotEquals(text_before_use_clear, text_after_use_clear);
-    }
-    
-    
-  //Check_Add merchant button display
-    @Test(priority =26)
-    public void Check_Add_merchant_button_display() {
-    	dr.findElement(Add_Merchant_button).isDisplayed();
-     }
-    
-  //Check_Add merchant icon display
-    @Test(priority =27)
-    public void Check_Add_merchant_icon_display() {
-    	dr.findElement(Add_Merchant_icon).isDisplayed();
-     }
-    
-  //Check_Add merchant button clickable
-    @Test(priority =28)
-    public void Check_Add_merchant_button_clickable() throws InterruptedException {
-    	dr.findElement(Add_Merchant_button).click();
-    	Thread.sleep(5000);
-    	String Actual_popup_header=dr.findElement(popup_box_header).getText();
-    	String Expected_popup_header="Merchant Type";
-    	Assert.assertEquals(Actual_popup_header, Expected_popup_header);
-    	dr.findElement(popup_box_close_icon).click();
+    	String imagePath = System.getProperty("user.dir") + "/Files/images.png";
+    	 dr.findElement(logo_upload_file).sendKeys(imagePath);
     	
-     }
-    
-  //Check_Add merchant icon display
-    @Test(priority =29)
-    public void Check_Add_merchant_icon_clickable() throws InterruptedException {
-    	Thread.sleep(5000);
-    	dr.findElement(Add_Merchant_icon).click();
-    	Thread.sleep(5000);
-    	String Actual_popup_header=dr.findElement(popup_box_header).getText();
-    	String Expected_popup_header="Merchant Type";
-    	Assert.assertEquals(Actual_popup_header, Expected_popup_header);
-    	dr.findElement(popup_box_close_icon).click();
-     }
-    
-   //Check Add restaurant
-    @Test(priority =30)
-    public void add_restaurant() throws InterruptedException, AWTException {
-    	Thread.sleep(5000);
-    	dr.findElement(Add_Merchant_button).click();
-    	Thread.sleep(5000);
-    	Select select_Merchant_type=new Select(dr.findElement(Popup_dropdowm_box));
-    	select_Merchant_type.selectByVisibleText("Hotel");
-    	dr.findElement(Proceed_button).click();
-    	Thread.sleep(5000);
-    	dr.findElement(Hotel_Name).sendKeys("Aai Hotel");
-    	dr.findElement(Email).sendKeys("fff@ff.com");
-    	dr.findElement(Description).sendKeys("The Aai Hotel is located near Tiantan Park, just a 10-minute walk from the National Center for the Performing Arts and Tian'anmen Square. Built in 1956 it has old school charm and many rooms still feature high, crown-molded ceilings. ");
-    	dr.findElement(Tagline).sendKeys("Stay & Enjoy");
-    	dr.findElement(Website).sendKeys("www.Aaihotel.com");
-    	//Scroll down page
-    	JavascriptExecutor js = (JavascriptExecutor) dr;
-        js.executeScript("window.scrollBy(0,1000)");
     	
-    	dr.findElement(Address).sendKeys("2nd Floor, Signet Corner S. No. 134/5+6, Baner, Pune, Maharashtra 411045");
-    	Select sel_state=new Select(dr.findElement(State));
-    	sel_state.selectByVisibleText("Maharashtra");
-    	Thread.sleep(15000);
-    	dr.findElement(City).click();
-    	Select sel_city=new Select(dr.findElement(City));
-    	Thread.sleep(15000);
-    	sel_state.selectByVisibleText("Achalpur");
-    	dr.findElement(Pincode).sendKeys("411045");
-    	dr.findElement(latitude).sendKeys("18.56375");
-    	dr.findElement(longitude).sendKeys("73.78334");
-    	if(dr.findElement(Checkbox).isSelected()) {
-    		System.out.println("Checkbox is selected");
-    	}
-    	else {
-    		System.out.println("Checkbox is not selected");
-    		dr.findElement(Checkbox).click();
-    		System.out.println("Checkbox is selected after click on checkbox");
-    	}
-    	
-    	dr.findElement(Save_and_Proceed_button).click();
-    	Thread.sleep(5000);
-    	
-    	//Restaurant's Detail Form : Reastaurant Features
-    	dr.findElement(Cuisine).click();
-    	dr.findElement(Veg_Non_veg).click();
-    	dr.findElement(specific_customer_services).click();
-    	//Scroll down page
-    	JavascriptExecutor jse = (JavascriptExecutor) dr;
-        jse.executeScript("window.scrollBy(0,1200)");
-        Thread.sleep(5000);
-        dr.findElement(Save_Proceed).click();
-        Thread.sleep(5000);
-        
-        //Restaurant's Detail Form : Reastaurant Images
-        JavascriptExecutor jsex = (JavascriptExecutor) dr;
-        jsex.executeScript("window.scrollBy(0,1000)");
-        //dr.findElement(Upload_menu_card_image).click();
-        dr.findElement(Upload_menu_card_image).click();
-     // file path passed as parameter to StringSelection
+    	/*
         Thread.sleep(10000);
-        StringSelection s = new StringSelection("D:\\Menu card.jpg");
+        StringSelection s = new StringSelection("D:\\images");
         // Clipboard copy
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s,null);        
         
@@ -432,26 +302,25 @@ public class Admin_Lenders_Testcases {
         //pressing enter
         r.keyPress(KeyEvent.VK_ENTER);
         //releasing enter
-        r.keyRelease(KeyEvent.VK_ENTER);
-        
-        Thread.sleep(5000);
-        dr.findElement(Save_an_Proceed).click();
-        
-        
-        //Restaurant's Detail Form : Bank Details
-        Thread.sleep(5000);
-        dr.findElement(GST_field).sendKeys("35BBBCC1206D1ZK");
-        dr.findElement(PAN_field).sendKeys("BBBCC1206D");
-        dr.findElement(Bank_name).sendKeys("ICICI");
-        dr.findElement(Account_Number).sendKeys("649301150421");
-        dr.findElement(IFSC).sendKeys("ICIC0004639");
-        JavascriptExecutor jsexe = (JavascriptExecutor) dr;
-        jsexe.executeScript("window.scrollBy(0,1000)");
-        dr.findElement(Contact_Name).sendKeys("Ajay Shinde");
-        dr.findElement(Primary_Contact_number).sendKeys("1111111111");
-        dr.findElement(Secondary_Contact_number).sendKeys("1111111112");
-        dr.findElement(Submit_Button).click();
-        Thread.sleep(5000);
-     }
+        r.keyRelease(KeyEvent.VK_ENTER);   */
+		    	dr.findElement(website).sendKeys("www.google.com");
+		    	dr.findElement(contact_peson).sendKeys("Ajit");
+		    	dr.findElement(contactNumberPrimary).sendKeys("1111111112");
+		    	dr.findElement(contactNumberSecondry).sendKeys("1111111113");
+		    	dr.findElement(email).sendKeys("ad@ad.com");
+		    	
+		    	JavascriptExecutor j = (JavascriptExecutor) dr;
+				j.executeScript("window.scrollBy(0,1000)");
+				
+		    	dr.findElement(API_key).sendKeys("707H78D1QUE1SANHIN3V");
+		    	dr.findElement(apiSecret).sendKeys("44jbdfJ");
+		    	
+		    	dr.findElement(save_button).click();
+		        Thread.sleep(5000);
+		        String Actual_page_header=dr.findElement(Lenders_pege_header).getText();
+		    	String Expexted_page_header="Lenders";
+		    	Assert.assertEquals(Actual_page_header, Expexted_page_header);  
+		    }
+		    
 
 }

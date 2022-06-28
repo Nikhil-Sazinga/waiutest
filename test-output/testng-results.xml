@@ -1,280 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="35" passed="32" failed="3" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-11T12:55:37Z" name="Suite" finished-at="2022-05-11T12:58:12Z" duration-ms="155236">
+  <suite started-at="2022-06-16T10:43:15 IST" name="Suite" finished-at="2022-06-16T10:45:17 IST" duration-ms="122123">
     <groups>
     </groups>
-    <test started-at="2022-05-11T12:55:37Z" name="Admin_Merchants_Hotel_Page_Testcases" finished-at="2022-05-11T12:58:12Z" duration-ms="155236">
-      <class name="Testcases2.Admin_Merchants_Hotel_Page_Testcases">
-        <test-method is-config="true" signature="launchbrowser()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:25:37Z" name="launchbrowser" finished-at="2022-05-11T18:25:44Z" duration-ms="7579" status="PASS">
+    <test started-at="2022-06-16T10:43:15 IST" name="Admin_Merchants_Reastaurant_Page_Testcases" finished-at="2022-06-16T10:45:17 IST" duration-ms="122123">
+      <class name="Testcases2.Admin_Merchants_Reastaurant_Page_Testcases">
+        <test-method is-config="true" signature="launchbrowser()[pri:0, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:15 IST" name="launchbrowser" finished-at="2022-06-16T10:43:24 IST" duration-ms="8747" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser -->
-        <test-method signature="Login()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:25:44Z" name="Login" finished-at="2022-05-11T18:25:58Z" duration-ms="13482" status="PASS">
+        <test-method signature="Login()[pri:0, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:24 IST" name="Login" finished-at="2022-06-16T10:43:37 IST" duration-ms="12812" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Check_Admin_menu_clickable()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:25:58Z" name="Check_Admin_menu_clickable" finished-at="2022-05-11T18:26:03Z" duration-ms="5113" status="PASS">
+        <test-method signature="Check_Admin_menu_clickable()[pri:1, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:37 IST" name="Check_Admin_menu_clickable" finished-at="2022-06-16T10:43:42 IST" duration-ms="5073" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Admin_menu_clickable -->
-        <test-method signature="Check_Merchants_menu_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:03Z" name="Check_Merchants_menu_display" finished-at="2022-05-11T18:26:03Z" duration-ms="238" status="PASS">
+        <test-method signature="Check_Merchants_menu_display()[pri:2, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:42 IST" name="Check_Merchants_menu_display" finished-at="2022-06-16T10:43:42 IST" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Merchants_menu_display -->
-        <test-method signature="Check_Merchants_menu_Clickable()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:03Z" name="Check_Merchants_menu_Clickable" finished-at="2022-05-11T18:26:08Z" duration-ms="5155" status="PASS">
+        <test-method signature="Check_Merchants_menu_Clickable()[pri:3, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:42 IST" name="Check_Merchants_menu_Clickable" finished-at="2022-06-16T10:43:47 IST" duration-ms="5077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Merchants_menu_Clickable -->
-        <test-method signature="Check_Merchants_webpage_title()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:08Z" name="Check_Merchants_webpage_title" finished-at="2022-05-11T18:26:08Z" duration-ms="55" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Merchants_webpage_title -->
-        <test-method signature="check_Merchants_page_header()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:08Z" name="check_Merchants_page_header" finished-at="2022-05-11T18:26:08Z" duration-ms="48" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- check_Merchants_page_header -->
-        <test-method signature="Merchants_field_label_text()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:08Z" name="Merchants_field_label_text" finished-at="2022-05-11T18:26:08Z" duration-ms="53" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Merchants_field_label_text -->
-        <test-method signature="Check_Merchant_field_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:08Z" name="Check_Merchant_field_display" finished-at="2022-05-11T18:26:08Z" duration-ms="67" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Merchant_field_display -->
-        <test-method signature="placeholder_text_of_Merchants_field()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:08Z" name="placeholder_text_of_Merchants_field" finished-at="2022-05-11T18:26:09Z" duration-ms="447" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeholder_text_of_Merchants_field -->
-        <test-method signature="Select_Reastaurant_Merchant_Type()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:09Z" name="Select_Reastaurant_Merchant_Type" finished-at="2022-05-11T18:26:09Z" duration-ms="342" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Select_Reastaurant_Merchant_Type -->
-        <test-method signature="Select_Hotel_Merchant_Type()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:09Z" name="Select_Hotel_Merchant_Type" finished-at="2022-05-11T18:26:09Z" duration-ms="302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Select_Hotel_Merchant_Type -->
-        <test-method signature="Status_field_label_text()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:09Z" name="Status_field_label_text" finished-at="2022-05-11T18:26:10Z" duration-ms="54" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Status_field_label_text -->
-        <test-method signature="Check_Status_field_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="Check_Status_field_display" finished-at="2022-05-11T18:26:10Z" duration-ms="58" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Status_field_display -->
-        <test-method signature="placeholder_text_of_Status_field()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="placeholder_text_of_Status_field" finished-at="2022-05-11T18:26:10Z" duration-ms="179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeholder_text_of_Status_field -->
-        <test-method signature="Select_Active_Status_Type()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="Select_Active_Status_Type" finished-at="2022-05-11T18:26:10Z" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Select_Active_Status_Type -->
-        <test-method signature="Select_InActive_Status_Type()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="Select_InActive_Status_Type" finished-at="2022-05-11T18:26:10Z" duration-ms="203" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Select_InActive_Status_Type -->
-        <test-method signature="State_field_label_text()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="State_field_label_text" finished-at="2022-05-11T18:26:10Z" duration-ms="110" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- State_field_label_text -->
-        <test-method signature="Check_State_field_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="Check_State_field_display" finished-at="2022-05-11T18:26:10Z" duration-ms="115" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_State_field_display -->
-        <test-method signature="placeholder_text_of_State_field()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:10Z" name="placeholder_text_of_State_field" finished-at="2022-05-11T18:26:11Z" duration-ms="184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeholder_text_of_State_field -->
-        <test-method signature="Select_state_option_from_dropdownlist()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:11Z" name="Select_state_option_from_dropdownlist" finished-at="2022-05-11T18:26:12Z" duration-ms="861" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Select_state_option_from_dropdownlist -->
-        <test-method signature="City_field_label_text()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:12Z" name="City_field_label_text" finished-at="2022-05-11T18:26:19Z" duration-ms="7099" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- City_field_label_text -->
-        <test-method signature="Check_City_field_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:19Z" name="Check_City_field_display" finished-at="2022-05-11T18:26:19Z" duration-ms="52" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_City_field_display -->
-        <test-method signature="Check_Searh_field_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:19Z" name="Check_Searh_field_display" finished-at="2022-05-11T18:26:26Z" duration-ms="7090" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Searh_field_display -->
-        <test-method signature="Check_Searh_icon_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:26Z" name="Check_Searh_icon_display" finished-at="2022-05-11T18:26:26Z" duration-ms="67" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Searh_icon_display -->
-        <test-method signature="placeholder_text_of_City_field()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:26Z" name="placeholder_text_of_City_field" finished-at="2022-05-11T18:26:26Z" duration-ms="291" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeholder_text_of_City_field -->
-        <test-method signature="Select_City_option_from_dropdownlist()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:26Z" name="Select_City_option_from_dropdownlist" finished-at="2022-05-11T18:26:33Z" duration-ms="7075" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Select_City_option_from_dropdownlist -->
-        <test-method signature="placeholder_text_of_Search_field()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:33Z" name="placeholder_text_of_Search_field" finished-at="2022-05-11T18:26:43Z" duration-ms="10103" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Search Keyword] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Search Keyword] but found []
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at Testcases2.Admin_Merchants_Hotel_Page_Testcases.placeholder_text_of_Search_field(Admin_Merchants_Hotel_Page_Testcases.java:285)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- placeholder_text_of_Search_field -->
-        <test-method signature="Search_functionlity()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:43Z" name="Search_functionlity" finished-at="2022-05-11T18:26:43Z" duration-ms="147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Search_functionlity -->
-        <test-method signature="Check_Clear_field_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:43Z" name="Check_Clear_field_display" finished-at="2022-05-11T18:26:54Z" duration-ms="10084" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Clear_field_display -->
-        <test-method signature="Clear_functionlity()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:26:54Z" name="Clear_functionlity" finished-at="2022-05-11T18:27:07Z" duration-ms="13295" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.assertNotEquals(Assert.java:758)
-	at org.testng.Assert.assertNotEquals(Assert.java:763)
-	at Testcases2.Admin_Merchants_Hotel_Page_Testcases.Clear_functionlity(Admin_Merchants_Hotel_Page_Testcases.java:316)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Clear_functionlity -->
-        <test-method signature="Check_Add_merchant_button_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:27:07Z" name="Check_Add_merchant_button_display" finished-at="2022-05-11T18:27:07Z" duration-ms="62" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Add_merchant_button_display -->
-        <test-method signature="Check_Add_merchant_icon_display()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:27:07Z" name="Check_Add_merchant_icon_display" finished-at="2022-05-11T18:27:07Z" duration-ms="43" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Add_merchant_icon_display -->
-        <test-method signature="Check_Add_merchant_button_clickable()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:27:07Z" name="Check_Add_merchant_button_clickable" finished-at="2022-05-11T18:27:12Z" duration-ms="5285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Add_merchant_button_clickable -->
-        <test-method signature="Check_Add_merchant_icon_clickable()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:27:12Z" name="Check_Add_merchant_icon_clickable" finished-at="2022-05-11T18:27:23Z" duration-ms="10288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Check_Add_merchant_icon_clickable -->
-        <test-method signature="add_restaurant()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:27:23Z" name="add_restaurant" finished-at="2022-05-11T18:28:12Z" duration-ms="49219" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate option with text: Achalpur
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
-System info: host: 'DESKTOP-P4GJM8J', ip: '192.168.0.161', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Achalpur
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-4', revision: 'c2d955b49e'
-System info: host: 'DESKTOP-P4GJM8J', ip: '192.168.0.161', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:148)
-	at Testcases2.Admin_Merchants_Hotel_Page_Testcases.add_restaurant(Admin_Merchants_Hotel_Page_Testcases.java:382)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="add_restaurant()[pri:53, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:47 IST" name="add_restaurant" finished-at="2022-06-16T10:45:17 IST" duration-ms="90225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_restaurant -->
-        <test-method is-config="true" signature="teardow()[pri:0, instance:Testcases2.Admin_Merchants_Hotel_Page_Testcases@3e08ff24]" started-at="2022-05-11T18:28:12Z" name="teardow" finished-at="2022-05-11T18:28:12Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardow()[pri:0, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:45:17 IST" name="teardow" finished-at="2022-06-16T10:45:17 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardow -->
-      </class> <!-- Testcases2.Admin_Merchants_Hotel_Page_Testcases -->
-    </test> <!-- Admin_Merchants_Hotel_Page_Testcases -->
+      </class> <!-- Testcases2.Admin_Merchants_Reastaurant_Page_Testcases -->
+    </test> <!-- Admin_Merchants_Reastaurant_Page_Testcases -->
   </suite> <!-- Suite -->
 </testng-results>

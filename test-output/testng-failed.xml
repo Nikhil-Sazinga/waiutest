@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Suite]">
-  <test parallel="none" name="Admin_Merchants_Hotel_Page_Testcases(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Admin_Merchants_Reastaurant_Page_Testcases(failed)">
     <classes>
-      <class name="Testcases2.Admin_Merchants_Hotel_Page_Testcases">
+      <class name="Testcases2.Admin_Merchants_Reastaurant_Page_Testcases">
         <methods>
           <include name="add_restaurant"/>
           <include name="teardow"/>
-          <include name="Clear_functionlity"/>
-          <include name="placeholder_text_of_Search_field"/>
           <include name="launchbrowser"/>
         </methods>
-      </class> <!-- Testcases2.Admin_Merchants_Hotel_Page_Testcases -->
+      </class> <!-- Testcases2.Admin_Merchants_Reastaurant_Page_Testcases -->
     </classes>
-  </test> <!-- Admin_Merchants_Hotel_Page_Testcases(failed) -->
+  </test> <!-- Admin_Merchants_Reastaurant_Page_Testcases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -15,8 +15,8 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 	public void Login() throws InterruptedException {
 		dr.get(url);
 		Thread.sleep(6000);
-		dr.findElement(Username_field).sendKeys("bluefire");
-		dr.findElement(Password_field).sendKeys("bluefire@123");
+		dr.findElement(Username_field).sendKeys("Ramesh");
+		dr.findElement(Password_field).sendKeys("12345678");
 		dr.findElement(LogIn_Button).click();
 		Thread.sleep(6000);
 		String actual=dr.findElement(Dashboard_menu).getText();
@@ -66,7 +66,7 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 	@Test(priority =5)
 	public void Check_Merchants_Transactions_webpage_title() {
 		String Actual_Merchants_webpage_title=dr.getTitle();
-		String Expected_Merchants_webpage_title="WAIU - Transactions (v-1.0.6)";
+		String Expected_Merchants_webpage_title="WAIU - Transactions (v-1.0.5)";
 		Assert.assertEquals(Actual_Merchants_webpage_title, Expected_Merchants_webpage_title);		
 	}
 	
@@ -99,8 +99,8 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 	@Test(priority =9)
 	public void Check_Start_Date_field_clickable() throws InterruptedException {
 		Thread.sleep(5000);
-		dr.findElement(Start_Date).click();
-		Thread.sleep(5000);
+		//dr.findElement(Start_Date).click();
+		//Thread.sleep(5000);
 		dr.findElement(Start_Date).sendKeys("02-02-2022");
 	}
 	
@@ -124,8 +124,8 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 	@Test(priority =12)
 	public void Check_End_Date_field_clickable() throws InterruptedException {
 		Thread.sleep(5000);
-		dr.findElement(End_Date).click();
-		Thread.sleep(5000);
+		//dr.findElement(End_Date).click();
+		//Thread.sleep(5000);
 		dr.findElement(End_Date).sendKeys("02-05-2022");
 	}
 	
@@ -348,7 +348,7 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
      }
     
     
-  //Check Merchants_field select option
+  //Check Lenders_field select option
 	@Test(priority =36)
 	public void Check_Lenders_field_select_option() throws InterruptedException {
 		Thread.sleep(5000);
@@ -362,26 +362,27 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 	}
 	
 	
-	//Check Customer Name label text
+	//Check Select column field label text
     @Test(priority =37)
-    public void Customer_Name_field_label_txt() {
-    	String Customer_Name_field_label_actaul_text=dr.findElement(Customer_Name_Label).getText();
-    	String Expected_label="Customer Name";
-    	Assert.assertEquals(Customer_Name_field_label_actaul_text, Expected_label);
+    public void Select_column_field_label_txt() {
+    	String Select_columnname_field_label_actaul_text=dr.findElement(Select_columnName_label).getText();
+    	String Expected_label="Select Column";
+    	Assert.assertEquals(Select_columnname_field_label_actaul_text, Expected_label);
     }
     
-    //Check_Customer Name_field_display
+    //Check_select_columnName_field_display
     @Test(priority =38)
-    public void Check_Customer_Name_field_displayed() {
-    	dr.findElement(Customer_Name).isDisplayed();
+    public void Check_select_columnName_field_displayed() {
+    	dr.findElement(select_by_columnName).isDisplayed();
      }
     
     
-  //Check Customer Name field send input
+  //Check select_columnName field send input
 	@Test(priority =39)
-	public void Check_Customer_Name_field_send_input() throws InterruptedException {
+	public void Check_select_columnName_field_select_option() throws InterruptedException {
 		Thread.sleep(5000);
-		dr.findElement(Customer_Name).sendKeys("A");
+		Select sel=new Select(dr.findElement(select_by_columnName));
+		sel.selectByVisibleText("Merchant Name");
 		Thread.sleep(5000);
 		
 	}
@@ -401,15 +402,29 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
     	dr.findElement(Serach_field).isDisplayed();
      }
     
+   
+    
+    //Check search button visibility
+    @Test(priority=42)
+    public void Check_search_button_visibility() {
+    	dr.findElement(Serach_button).isDisplayed();
+    }
+    
+    
+    
     
   //Check Search functionality
-	@Test(priority =42)
+	@Test(priority =43)
 	public void Check_Search_field_placeholder() throws InterruptedException {
+		dr.findElement(Clear_button).click();
 		Thread.sleep(5000);
-		
-		String Search_field_placeholder_actaul_text=dr.findElement(Serach_field).getAttribute("placeholder");
-    	String Expected_text="Search Keyword ";
-    	Assert.assertEquals(Search_field_placeholder_actaul_text, Expected_text);
+		Select sel=new Select(dr.findElement(select_by_columnName));
+		sel.selectByVisibleText("Merchant Name");
+		String input=dr.findElement(input_for_search_field).getText();
+		dr.findElement(Serach_field).sendKeys(input);
+		Thread.sleep(5000);
+    	String Expected_text=dr.findElement(input_for_search_field).getText();
+    	Assert.assertEquals(input, Expected_text);
 	
 	}
 	
@@ -467,9 +482,13 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 		Thread.sleep(5000);				
 		dr.findElement(Clear_button).click();
 		Thread.sleep(5000);
+		Select se=new Select(dr.findElement(Settelment));
+		se.selectByVisibleText("Unsettle");
 		
      }
 	
+	
+	/*
 	//Check Search functionality
 		@Test(priority =49)
 		public void Check_Search_functionality() throws InterruptedException {
@@ -482,7 +501,7 @@ public class MerchantMenu_Transactions_Testcases extends MerchantMenu_Transactio
 			String Search_result_data_from_table=dr.findElement(take_data_from_table_for_search_functinality_verify).getText();
 	    	Assert.assertEquals(Search_result_data_from_table, input_for_search);
 		
-		}
+		}*/
 	
 	
 }

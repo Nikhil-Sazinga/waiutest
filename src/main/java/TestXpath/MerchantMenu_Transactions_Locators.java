@@ -33,15 +33,21 @@ public class MerchantMenu_Transactions_Locators extends Testbase2 {
 	public By Merchants=By.xpath("//select[@id='merchant']");
 	public By Lenders_Label=By.xpath("//label[contains(text(),'Lenders')]");
 	public By Lenders=By.xpath("//select[@id='lender']");
+	public By Select_columnName_label=By.xpath("//label[contains(text(),'Select Column')]");
+	public By select_by_columnName=By.xpath("//select[@id='searchColumn']");
+	
 	public By Customer_Name_Label=By.xpath("//label[contains(text(),'Customer Name')]");
 	public By Customer_Name=By.cssSelector("input[name='searchCustomer']");
 	
 	//label[contains(text(),'Serach by keyword')]
 	public By Serach_by_keyword_Label=By.xpath("//label[contains(text(),'Search by keyword')]");
 	public By Serach_field=By.cssSelector("input[name='searchTerm']");
+	public By Serach_button=By.xpath("//button[contains(text(),'Search')]");
 	public By Settelment_Label=By.xpath("//label[contains(text(),'Settlement')]");
 	public By Settelment=By.xpath("//select[@id='settlement']");
 	public By Clear_button=By.xpath("//button[contains(text(),'Clear')]");
+	
+	public By input_for_search_field=By.xpath("//tbody/tr[1]/td[2]");
 	
     public By take_data_from_table_for_search_functinality_verify=By.xpath("//tbody/tr[1]/td[2]/span[1]");
 

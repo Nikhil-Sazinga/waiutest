@@ -7,6 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -260,7 +261,7 @@ public class Admin_Merchants_Hotel_Page_Testcases extends Admin_Merchants_Hotel_
 		    
 		    
 		    //Check_Search_field_display
-		    @Test(priority =21)
+		    @Test(priority =24)
 		    public void Check_Searh_field_display() throws InterruptedException {
 		    	Thread.sleep(7000);
 		    	dr.findElement(Search_field1).isDisplayed();
@@ -268,19 +269,19 @@ public class Admin_Merchants_Hotel_Page_Testcases extends Admin_Merchants_Hotel_
 		    
 		    
 		  //Check_Search_icon_display
-		    @Test(priority =22)
+		    @Test(priority =25)
 		    public void Check_Searh_icon_display() {
 		    	dr.findElement(Search_icon).isDisplayed();
 		     }
 		    
 		    //Ckeck placeholder text of Search_field
-		    @Test(priority =23)
+		    @Test(priority =26)
 		    public void placeholder_text_of_Search_field() throws InterruptedException {
 		    Thread.sleep(10000);
 		    
 		    String Actual_text_in_search_field=dr.findElement(Search_field1).getText();
 		    System.out.println("Placeholder of Search field :"+Actual_text_in_search_field+":");
-			String expected_text_in_search_field="Search Keyword";
+			String expected_text_in_search_field="Search By Keyword";
 			System.out.println("Default Text displayed in Search :"+Actual_text_in_search_field);
 			Assert.assertEquals(Actual_text_in_search_field,expected_text_in_search_field);
 		    }
@@ -379,7 +380,7 @@ public class Admin_Merchants_Hotel_Page_Testcases extends Admin_Merchants_Hotel_
 		    	dr.findElement(City).click();
 		    	Select sel_city=new Select(dr.findElement(City));
 		    	Thread.sleep(15000);
-		    	sel_state.selectByVisibleText("Achalpur");
+		    	sel_city.selectByVisibleText("Achalpur");
 		    	dr.findElement(Pincode).sendKeys("411045");
 		    	dr.findElement(latitude).sendKeys("18.56375");
 		    	dr.findElement(longitude).sendKeys("73.78334");
@@ -409,11 +410,13 @@ public class Admin_Merchants_Hotel_Page_Testcases extends Admin_Merchants_Hotel_
 		        //Restaurant's Detail Form : Reastaurant Images
 		        JavascriptExecutor jsex = (JavascriptExecutor) dr;
 		        jsex.executeScript("window.scrollBy(0,1000)");
-		        //dr.findElement(Upload_menu_card_image).click();
-		        dr.findElement(Upload_menu_card_image).click();
-		     // file path passed as parameter to StringSelection
+                //Upload image
+		        Actions act=new Actions(dr);
+		    	act.moveToElement(dr.findElement(Upload_menu_card_image));
+		    	act.click().build().perform();  	  	
+		    	
 		        Thread.sleep(10000);
-		        StringSelection s = new StringSelection("D:\\Menu card.jpg");
+		        StringSelection s = new StringSelection("D:\\Menu card");
 		        // Clipboard copy
 		        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s,null);        
 		        
