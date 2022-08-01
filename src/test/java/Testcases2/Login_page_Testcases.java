@@ -17,7 +17,7 @@ public class Login_page_Testcases extends Login_Page_Locators{
 	public void check_webpage_title() {
 		String actual=dr.getTitle();
 		System.out.println("Login web page Title :"+actual);
-		String expect="WAIU - Login (v-1.0.5)";
+		String expect="WAIU - Login (v-1.0.18)";
 		Assert.assertEquals(actual, expect);
 				
 	}

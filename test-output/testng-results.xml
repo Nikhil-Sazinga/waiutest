@@ -1,41 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="30" passed="30" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-16T10:43:15 IST" name="Suite" finished-at="2022-06-16T10:45:17 IST" duration-ms="122123">
+  <suite started-at="2022-08-01T14:17:56 IST" name="Suite" finished-at="2022-08-01T14:20:00 IST" duration-ms="124551">
     <groups>
     </groups>
-    <test started-at="2022-06-16T10:43:15 IST" name="Admin_Merchants_Reastaurant_Page_Testcases" finished-at="2022-06-16T10:45:17 IST" duration-ms="122123">
-      <class name="Testcases2.Admin_Merchants_Reastaurant_Page_Testcases">
-        <test-method is-config="true" signature="launchbrowser()[pri:0, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:15 IST" name="launchbrowser" finished-at="2022-06-16T10:43:24 IST" duration-ms="8747" status="PASS">
+    <test started-at="2022-08-01T14:17:56 IST" name="Admin_Customer_Testcases" finished-at="2022-08-01T14:20:00 IST" duration-ms="124551">
+      <class name="Testcases2.Admin_Customer_Testcases">
+        <test-method is-config="true" signature="launchbrowser()[pri:0, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:17:56 IST" name="launchbrowser" finished-at="2022-08-01T14:18:06 IST" duration-ms="9731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser -->
-        <test-method signature="Login()[pri:0, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:24 IST" name="Login" finished-at="2022-06-16T10:43:37 IST" duration-ms="12812" status="PASS">
+        <test-method signature="Login()[pri:0, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:06 IST" name="Login" finished-at="2022-08-01T14:18:18 IST" duration-ms="12662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Check_Admin_menu_clickable()[pri:1, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:37 IST" name="Check_Admin_menu_clickable" finished-at="2022-06-16T10:43:42 IST" duration-ms="5073" status="PASS">
+        <test-method signature="Check_Merchant_menu_display()[pri:1, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:18 IST" name="Check_Merchant_menu_display" finished-at="2022-08-01T14:18:18 IST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Check_Admin_menu_clickable -->
-        <test-method signature="Check_Merchants_menu_display()[pri:2, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:42 IST" name="Check_Merchants_menu_display" finished-at="2022-06-16T10:43:42 IST" duration-ms="79" status="PASS">
+        </test-method> <!-- Check_Merchant_menu_display -->
+        <test-method signature="Check_Merchant_menu_clickable()[pri:2, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:18 IST" name="Check_Merchant_menu_clickable" finished-at="2022-08-01T14:18:28 IST" duration-ms="10133" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Check_Merchants_menu_display -->
-        <test-method signature="Check_Merchants_menu_Clickable()[pri:3, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:42 IST" name="Check_Merchants_menu_Clickable" finished-at="2022-06-16T10:43:47 IST" duration-ms="5077" status="PASS">
+        </test-method> <!-- Check_Merchant_menu_clickable -->
+        <test-method signature="Check_Customer_menu_display()[pri:3, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:28 IST" name="Check_Customer_menu_display" finished-at="2022-08-01T14:18:28 IST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Check_Merchants_menu_Clickable -->
-        <test-method signature="add_restaurant()[pri:53, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:43:47 IST" name="add_restaurant" finished-at="2022-06-16T10:45:17 IST" duration-ms="90225" status="PASS">
+        </test-method> <!-- Check_Customer_menu_display -->
+        <test-method signature="Check_Customer_menu_Clickable()[pri:4, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:28 IST" name="Check_Customer_menu_Clickable" finished-at="2022-08-01T14:18:34 IST" duration-ms="5070" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- add_restaurant -->
-        <test-method is-config="true" signature="teardow()[pri:0, instance:Testcases2.Admin_Merchants_Reastaurant_Page_Testcases@4310d43]" started-at="2022-06-16T10:45:17 IST" name="teardow" finished-at="2022-06-16T10:45:17 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- Check_Customer_menu_Clickable -->
+        <test-method signature="Check_Customer_webpage_title()[pri:5, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:34 IST" name="Check_Customer_webpage_title" finished-at="2022-08-01T14:18:34 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardow -->
-      </class> <!-- Testcases2.Admin_Merchants_Reastaurant_Page_Testcases -->
-    </test> <!-- Admin_Merchants_Reastaurant_Page_Testcases -->
+        </test-method> <!-- Check_Customer_webpage_title -->
+        <test-method signature="check_Merchant_Customers_page_header()[pri:6, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:34 IST" name="check_Merchant_Customers_page_header" finished-at="2022-08-01T14:18:34 IST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Merchant_Customers_page_header -->
+        <test-method signature="State_field_label_txt()[pri:7, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:34 IST" name="State_field_label_txt" finished-at="2022-08-01T14:18:34 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- State_field_label_txt -->
+        <test-method signature="Check_State_field_displayed()[pri:8, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:34 IST" name="Check_State_field_displayed" finished-at="2022-08-01T14:18:34 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_State_field_displayed -->
+        <test-method signature="Check_State_field_clickable()[pri:9, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:34 IST" name="Check_State_field_clickable" finished-at="2022-08-01T14:18:39 IST" duration-ms="5455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_State_field_clickable -->
+        <test-method signature="City_field_label_txt()[pri:10, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:39 IST" name="City_field_label_txt" finished-at="2022-08-01T14:18:39 IST" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- City_field_label_txt -->
+        <test-method signature="Check_City_field_displayed()[pri:11, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:39 IST" name="Check_City_field_displayed" finished-at="2022-08-01T14:18:39 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_City_field_displayed -->
+        <test-method signature="Check_City_field_clickable()[pri:12, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:39 IST" name="Check_City_field_clickable" finished-at="2022-08-01T14:18:49 IST" duration-ms="9987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_City_field_clickable -->
+        <test-method signature="Start_Date_field_label_text()[pri:13, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:49 IST" name="Start_Date_field_label_text" finished-at="2022-08-01T14:18:49 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Start_Date_field_label_text -->
+        <test-method signature="Check_Start_Date_field_display()[pri:14, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:49 IST" name="Check_Start_Date_field_display" finished-at="2022-08-01T14:18:49 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Start_Date_field_display -->
+        <test-method signature="Check_Start_Date_field_clickable()[pri:15, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:18:49 IST" name="Check_Start_Date_field_clickable" finished-at="2022-08-01T14:19:00 IST" duration-ms="10292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Start_Date_field_clickable -->
+        <test-method signature="End_Date_field_label_text()[pri:16, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:00 IST" name="End_Date_field_label_text" finished-at="2022-08-01T14:19:00 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- End_Date_field_label_text -->
+        <test-method signature="Check_End_Date_field_display()[pri:17, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:00 IST" name="Check_End_Date_field_display" finished-at="2022-08-01T14:19:00 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_End_Date_field_display -->
+        <test-method signature="Check_End_Date_field_clickable()[pri:18, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:00 IST" name="Check_End_Date_field_clickable" finished-at="2022-08-01T14:19:05 IST" duration-ms="5119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_End_Date_field_clickable -->
+        <test-method signature="Check_select_columnName_field_visibility()[pri:19, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:05 IST" name="Check_select_columnName_field_visibility" finished-at="2022-08-01T14:19:05 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_select_columnName_field_visibility -->
+        <test-method signature="Check_select_columnName_field_placeholder()[pri:20, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:05 IST" name="Check_select_columnName_field_placeholder" finished-at="2022-08-01T14:19:05 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_select_columnName_field_placeholder -->
+        <test-method signature="Check_Search_field_displayed()[pri:21, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:05 IST" name="Check_Search_field_displayed" finished-at="2022-08-01T14:19:10 IST" duration-ms="5074" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Search_field_displayed -->
+        <test-method signature="Check_Search_field_editable()[pri:22, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:10 IST" name="Check_Search_field_editable" finished-at="2022-08-01T14:19:15 IST" duration-ms="5162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Search_field_editable -->
+        <test-method signature="Check_search_field_placeholder()[pri:23, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:15 IST" name="Check_search_field_placeholder" finished-at="2022-08-01T14:19:20 IST" duration-ms="5164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_search_field_placeholder -->
+        <test-method signature="Check_search_button_visibility()[pri:24, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:20 IST" name="Check_search_button_visibility" finished-at="2022-08-01T14:19:20 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_search_button_visibility -->
+        <test-method signature="Check_Clear_button_displayed()[pri:25, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:20 IST" name="Check_Clear_button_displayed" finished-at="2022-08-01T14:19:20 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Clear_button_displayed -->
+        <test-method signature="Check_Clear_functionality()[pri:26, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:20 IST" name="Check_Clear_functionality" finished-at="2022-08-01T14:19:31 IST" duration-ms="10410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Clear_functionality -->
+        <test-method signature="Check_Search_functionality()[pri:27, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:31 IST" name="Check_Search_functionality" finished-at="2022-08-01T14:19:50 IST" duration-ms="19308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Search_functionality -->
+        <test-method signature="Check_View_customer_icon_visibility()[pri:28, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:50 IST" name="Check_View_customer_icon_visibility" finished-at="2022-08-01T14:19:50 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_View_customer_icon_visibility -->
+        <test-method signature="Check_View_customer_icon_clickable()[pri:29, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:19:50 IST" name="Check_View_customer_icon_clickable" finished-at="2022-08-01T14:20:00 IST" duration-ms="10210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_View_customer_icon_clickable -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcases2.Admin_Customer_Testcases@273e7444]" started-at="2022-08-01T14:20:00 IST" name="teardown" finished-at="2022-08-01T14:20:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Testcases2.Admin_Customer_Testcases -->
+    </test> <!-- Admin_Customer_Testcases -->
   </suite> <!-- Suite -->
 </testng-results>

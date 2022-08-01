@@ -15,7 +15,7 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 		public void login() throws InterruptedException {
 			dr.get(url);
 			Thread.sleep(5000);
-			dr.findElement(By.xpath("//input[@id='userName']")).sendKeys("rameshtk");
+			dr.findElement(By.xpath("//input[@id='userName']")).sendKeys("Ramesh");
 			  dr.findElement(By.id("password")).sendKeys("12345678");
 			  dr.findElement(By.xpath("//button[contains(text(),'Log in')]")).click();
 			  Thread.sleep(5000);
@@ -66,7 +66,7 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 		public void Check_user_webpage_title() {
 			String Actual_User_webpage_title=dr.getTitle();
 			System.out.println("Users web page title : "+Actual_User_webpage_title);
-			String Expected_User_webpage_title="WAIU - Users (v-1.0.5)";
+			String Expected_User_webpage_title="WAIU - Users (v-1.0.18)";
 			Assert.assertEquals(Actual_User_webpage_title, Expected_User_webpage_title);		
 		}
 		
@@ -109,7 +109,7 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    Select sel=new Select(dr.findElement(select_columnname_field));
 	    String Actual_text_in_select_columnname_field=sel.getFirstSelectedOption().getText();
 	    //System.out.println("Placeholder of Search columnname field :"+Actual_text_in_search_columnname_field+":");
-		String expected_text_in_select_columnname_field="Select a Column Name";
+		String expected_text_in_select_columnname_field="Select Column Name";
 		//System.out.println("Default Text displayed in Search :"+Actual_text_in_search_columnname_field);
 		Assert.assertEquals(Actual_text_in_select_columnname_field,expected_text_in_select_columnname_field);
 	    }
@@ -138,7 +138,7 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    dr.findElement(Clear_button).click();
 	    Thread.sleep(5000);	
 	    Select sel1=new Select(dr.findElement(select_columnname_field));
-	    sel1.selectByVisibleText("Select a Column Name");
+	    sel1.selectByVisibleText("Select Column Name");
 	    Select sel=new Select(dr.findElement(select_columnname_field));
 	    sel.selectByVisibleText("First Name");
 	    Thread.sleep(5000);
@@ -264,10 +264,10 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    @Test(priority = 20)
 	    public void Clear_functinality_for_roles_field() throws InterruptedException {
 	    	Select sel=new Select(dr.findElement(Roles_field));
-	    	sel.selectByVisibleText("Super Admin");
+	    	sel.selectByVisibleText("Admin");
 	    	Thread.sleep(5000);
 	    	String Selected_Dropdown_text=sel.getFirstSelectedOption().getText();   //
-	    	String expected_value_in_dropdown="Super Admin";
+	    	String expected_value_in_dropdown="Admin";
 	    	System.out.println("Seleted option Text in Roles dropdown :"+Selected_Dropdown_text);
 	    	//Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);
 	    	System.out.println("Seleted option Text in Roles dropdown before use of clear functinality:"+Selected_Dropdown_text);
@@ -301,7 +301,7 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    	dr.findElement(Clear_button).click();
 	    	Thread.sleep(5000);
 	    	Select sel=new Select(dr.findElement(Roles_field));
-	    	sel.selectByVisibleText("Super Admin");
+	    	sel.selectByVisibleText("Admin");
 	    	dr.findElement(Search_field).sendKeys("admin");
 	    	dr.findElement(Clear_button).click();
 	    	
@@ -332,13 +332,14 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    public void Check_Roles_dropdown_clickable_and_select_value_from_dropdown() {
 	    	//dr.findElement(Roles_field).click();
 	    	Select sel=new Select(dr.findElement(Roles_field));
-	    	sel.selectByVisibleText("Select a Role");
+	    	sel.selectByVisibleText("Select Role");
 	    	String default_Dropdown_text=sel.getFirstSelectedOption().getText();
-	    	String expected_value_in_dropdown="Select a Role";
+	    	String expected_value_in_dropdown="Select Role";
 	    	System.out.println("Default option Text displayed in Roles dropdown :"+default_Dropdown_text);
 	    	Assert.assertEquals(default_Dropdown_text,expected_value_in_dropdown);
 	    }
 	    
+	    /*
 	  //Check Select_SuperAdmin_Option_from_dropdown
 	    @Test(priority =22)
 	    public void Select_SuperAdmin_Option() {
@@ -348,7 +349,7 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    	String expected_value_in_dropdown="Super Admin";
 	    	System.out.println("Selected option Text displayed in Roles dropdown :"+Selected_Dropdown_text);
 	    	Assert.assertEquals(Selected_Dropdown_text,expected_value_in_dropdown);	   	
-	    }
+	    }*/
 	    
 	    /*
 	  //Check filter for SuperAdmin Option
@@ -424,9 +425,10 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    
 	  //Check filter for support Option
 	    @Test(priority =29)
-	    public void Check_filter_for_support_Option() {
+	    public void Check_filter_for_support_Option() throws InterruptedException {
 	    	Select sel=new Select(dr.findElement(Roles_field));
 	    	sel.selectByVisibleText("Support");
+	    	Thread.sleep(5000);
 	    	String Selected_Dropdown_text=sel.getFirstSelectedOption().getText();
 	    	String expected_text_in_role_column=dr.findElement(role_column_result).getText();
 	    	//System.out.println("Selected option Text displayed in Roles dropdown :"+Selected_Dropdown_text);
@@ -436,9 +438,10 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    
 	  //Check Select_Staff_Option_from_dropdown
 	    @Test(priority =30)
-	    public void Select_staff_Option() {
+	    public void Select_staff_Option() throws InterruptedException {
 	    	Select sel=new Select(dr.findElement(Roles_field));
 	    	sel.selectByVisibleText("Staff");
+	    	Thread.sleep(5000);
 	    	String Selected_Dropdown_text=sel.getFirstSelectedOption().getText();
 	    	String expected_value_in_dropdown="Staff";
 	    	System.out.println("Selected option Text displayed in Roles dropdown :"+Selected_Dropdown_text);
@@ -475,9 +478,10 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    
 		  //Check filter for Customer Option
 		    @Test(priority =33)
-		    public void Check_filter_for_Customer_Option() {
+		    public void Check_filter_for_Customer_Option() throws InterruptedException {
 		    	Select sel=new Select(dr.findElement(Roles_field));
 		    	sel.selectByVisibleText("Customer");
+		    	Thread.sleep(5000);
 		    	String Selected_Dropdown_text=sel.getFirstSelectedOption().getText();
 		    	String expected_text_in_role_column=dr.findElement(role_column_result).getText();
 		    	//System.out.println("Selected option Text displayed in Roles dropdown :"+Selected_Dropdown_text);
@@ -597,11 +601,19 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	  //Check edit user functionality
 	    @Test(priority = 45)
 	    public void Update_button_functionality_on_User_Profile_page() throws InterruptedException {
+	    	
+	    	Select sel=new Select(dr.findElement(select_columnname_field));
+		    sel.selectByVisibleText("First Name");
+		    Thread.sleep(5000);
+		    dr.findElement(Search_button).click();    	
 	    	Thread.sleep(5000);
 	    	dr.findElement(Edit_user_icon).click();
 	    	Thread.sleep(4000);
+	    	Select Select_State=new Select(dr.findElement(State));
+	    	Select_State.selectByVisibleText("Maharashtra");
 	    	Select Select_City=new Select(dr.findElement(City));
-	    	Thread.sleep(7000);
+	    	Thread.sleep(5000);
+	    	
 	    	Select_City.selectByVisibleText("Ale");
 	    	
 	    	JavascriptExecutor js = (JavascriptExecutor) dr;
@@ -619,6 +631,10 @@ public class Users_Page_Testcases extends Users_Page_Locators{
 	    //check updated data succssfully save & reflected on users home page
 	    @Test(priority = 46)
 	    public void updated_data_succssfully_save_and_reflected_on_users_home_page() throws InterruptedException {
+	    	Select sel=new Select(dr.findElement(select_columnname_field));
+		    sel.selectByVisibleText("First Name");
+		    Thread.sleep(5000);
+		    dr.findElement(Search_button).click();    	
 	    	Thread.sleep(5000);
 	    	dr.findElement(Edit_user_icon).click();
 	    	Thread.sleep(4000);

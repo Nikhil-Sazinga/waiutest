@@ -33,7 +33,7 @@ public class Login_Page_Locators extends Testbase2{
 	public By pwd_field_contain_length_msg=By.xpath("//p[contains(text(),'Password cannot be less than 8 characters')]");
 	public By cnfrm_pwd_field_contain_required_mesg=By.xpath("//p[contains(text(),'Confirm Password is required.')]");
 	public By pswd_not_match=By.xpath("//p[contains(text(),'Passwords do not match.')]");
-	public String username="rameshtk";
+	public String username="Ramesh";
 	public String old_password="12345678";
 	public String new_password="87654321";
 	public By invalid_usrnme_or_pswd_msg_element=By.xpath("//p[contains(text(),'Invalid Username or Password!')]");

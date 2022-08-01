@@ -22,16 +22,16 @@ public class Users_Page_Locators extends Testbase2{
 	public By user_name_search_input_from_table=By.xpath("//tbody/tr[1]/td[2]");
 	public By user_name_result_after_apply_search=By.xpath("//tbody/tr[1]/td[2]");
 	
-	public By first_name_search_input_from_table=By.xpath("//tbody/tr[1]/td[3]");
+	public By first_name_search_input_from_table=By.xpath("//tbody/tr[2]/td[3]");
 	public By first_name_result_after_apply_search=By.xpath("//tbody/tr[1]/td[3]");
 	
-	public By last_name_search_input_from_table=By.xpath("//tbody/tr[1]/td[4]");
+	public By last_name_search_input_from_table=By.xpath("//tbody/tr[2]/td[4]");
 	public By last_name_result_after_apply_search=By.xpath("//tbody/tr[1]/td[4]");
 	
-	public By mobile_no_search_input_from_table=By.xpath("//tbody/tr[1]/td[5]");
+	public By mobile_no_search_input_from_table=By.xpath("//tbody/tr[2]/td[5]");
 	public By mobile_no_result_after_apply_search=By.xpath("//tbody/tr[1]/td[5]");
 	
-	public By email_search_input_from_table=By.xpath("//tbody/tr[1]/td[6]");
+	public By email_search_input_from_table=By.xpath("//tbody/tr[2]/td[6]");
 	public By email_result_after_apply_search=By.xpath("//tbody/tr[1]/td[6]");
 	
 	public By Search_field=By.xpath("//input[@placeholder='Search Keyword']");

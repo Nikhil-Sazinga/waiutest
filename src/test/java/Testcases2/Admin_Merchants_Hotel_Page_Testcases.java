@@ -21,8 +21,8 @@ public class Admin_Merchants_Hotel_Page_Testcases extends Admin_Merchants_Hotel_
 			public void Login() throws InterruptedException {
 				dr.get(url);
 				Thread.sleep(6000);
-				dr.findElement(Username_field).sendKeys("bluefire");
-				dr.findElement(Password_field).sendKeys("bluefire@123");
+				dr.findElement(Username_field).sendKeys("Ramesh");
+				dr.findElement(Password_field).sendKeys("12345678");
 				dr.findElement(LogIn_Button).click();
 				Thread.sleep(6000);
 				String actual=dr.findElement(Dashboard_menu).getText();
@@ -457,5 +457,4 @@ public class Admin_Merchants_Hotel_Page_Testcases extends Admin_Merchants_Hotel_
 		        dr.findElement(Submit_Button).click();
 		        Thread.sleep(5000);
 		     }
-
 }

@@ -44,7 +44,7 @@ public class Admin_Merchants_Reastaurant_Page_Locators extends Testbase2{
 	public By Add_Merchant_button=By.xpath("//a[@class='btn btn-secondary btn-sm btnTextCenter mr-3']");
 	public By Add_Merchant_icon=By.xpath("//i[@class='fa fa-plus']");
 	public By merchant_type_result=By.xpath("//tbody/tr[1]/td[4]");
-	public By status_result=By.xpath("//tbody/tr[1]/td[7]");
+	public By status_result=By.xpath("//tbody/tr[2]/td[5]");
 	//public By view_icon=By.xpath("//tbody/tr[1]/td[10]/span[2]/i[1]");
 	public By state_matched=By.xpath("//label[@class='col-sm-8']");
 	

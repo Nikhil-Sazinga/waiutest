@@ -7,7 +7,7 @@
       
       <class name="Testcases2.Login_page_Testcases"/>
       </classes>
-     </test>      
+     </test>   
      
        
           <test name="Users_Page_Testcases">
@@ -15,8 +15,9 @@
       
       <class name="Testcases2.Users_Page_Testcases"/>
       </classes>
-     </test>  -->
+     </test>   
      
+ 
       <test name="Admin_Merchants_Reastaurant_Page_Testcases">
     <classes>
       
@@ -24,7 +25,7 @@
       </classes>
      </test>      
        
-        <!--
+        
         <test name="Admin_Merchants_Hotel_Page_Testcases">
     <classes>
       
@@ -54,16 +55,16 @@
       <class name="Testcases2.MerchantMenu_Transactions_Testcases"/>
       </classes>
      </test>      
-     
+     -->  
     
-      <test name="MerchantMenu_Customer_Testcases">
+      <test name="Admin_Customer_Testcases">
     <classes>
       
-      <class name="Testcases2.MerchantMenu_Customer_Testcases"/>
+      <class name="Testcases2.Admin_Customer_Testcases"/>
       </classes>
      </test>        
      
-      
+      <!--
      <test name="MerchantMenu_Staff_Testcases">
     <classes>
       

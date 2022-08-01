@@ -4,16 +4,16 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import TestXpath.MerchantMenu_Customer_Locators;
+import TestXpath.Admin_Customer_Locators;
 
-public class MerchantMenu_Customer_Testcases extends MerchantMenu_Customer_Locators{
+public class Admin_Customer_Testcases extends Admin_Customer_Locators{
 	
 	//Login
 		@Test(priority = 0)
 		public void Login() throws InterruptedException {
 			dr.get(url);
 			Thread.sleep(6000);
-			dr.findElement(Username_field).sendKeys("rameshtk");
+			dr.findElement(Username_field).sendKeys("Ramesh");
 			dr.findElement(Password_field).sendKeys("12345678");
 			dr.findElement(LogIn_Button).click();
 			Thread.sleep(6000);
@@ -28,17 +28,17 @@ public class MerchantMenu_Customer_Testcases extends MerchantMenu_Customer_Locat
 		}
 		
 		
-		//Check Merchant menu display
+		//Check Admin menu display
 		@Test(priority =1)
 		public void Check_Merchant_menu_display() {
-			dr.findElement(Merchant_menu).isDisplayed();
+			dr.findElement(Admin_menu).isDisplayed();
 		}
 		
-		//Check Merchant menu clickable
+		//Check Admin menu clickable
 		@Test(priority =2)
 		public void Check_Merchant_menu_clickable() throws InterruptedException {
 			Thread.sleep(5000);
-			dr.findElement(Merchant_menu).click();
+			dr.findElement(Admin_menu).click();
 			Thread.sleep(5000);
 		}
 		
@@ -64,7 +64,7 @@ public class MerchantMenu_Customer_Testcases extends MerchantMenu_Customer_Locat
 		@Test(priority =5)
 		public void Check_Customer_webpage_title() {
 			String Actual_Customer_webpage_title=dr.getTitle();
-			String Expected_Customer_webpage_title="WAIU - Customers (v-1.0.5)";
+			String Expected_Customer_webpage_title="WAIU - Customers (v-1.0.18)";
 			System.out.println("Webpage title : "+Actual_Customer_webpage_title);
 			Assert.assertEquals(Actual_Customer_webpage_title, Expected_Customer_webpage_title);		
 		}
@@ -225,7 +225,7 @@ public class MerchantMenu_Customer_Testcases extends MerchantMenu_Customer_Locat
 					dr.findElement(Clear_button).click();
 					Thread.sleep(5000);
 					String search_field_placeholder=dr.findElement(Search_field).getAttribute("placeholder");
-					String expect="Search by Keyword";
+					String expect="Search By Keyword";
 					Assert.assertEquals(search_field_placeholder, expect);
 				
 				}
@@ -255,7 +255,7 @@ public class MerchantMenu_Customer_Testcases extends MerchantMenu_Customer_Locat
 			dr.findElement(Clear_button).click();		
 			Thread.sleep(5000);
 			String search_field_placeholder=dr.findElement(Search_field).getAttribute("placeholder");
-			String expect_search_placeholder="Search by Keyword";
+			String expect_search_placeholder="Search By Keyword";
 			Assert.assertEquals(search_field_placeholder, expect_search_placeholder);
 			String select_columnname_field_placeholder=dr.findElement(select_by_column_name_).getAttribute("placeholder");
 			String expect="Select By Column Name";

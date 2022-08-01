@@ -70,7 +70,7 @@ public class Admin_Merchants_Reastaurant_Page_Testcases extends Admin_Merchants_
 		@Test(priority =4)
 		public void Check_Merchants_webpage_title() {
 			String Actual_Merchants_webpage_title=dr.getTitle();
-			String Expected_Merchants_webpage_title="WAIU - Merchants (v-1.0.5)";
+			String Expected_Merchants_webpage_title="WAIU - Admin (v-1.0.18)";
 			Assert.assertEquals(Actual_Merchants_webpage_title, Expected_Merchants_webpage_title);		
 		}
 		
@@ -197,9 +197,10 @@ public class Admin_Merchants_Reastaurant_Page_Testcases extends Admin_Merchants_
 	    
 	  //Check select Active_option then display only active records in table
 	    @Test(priority =17)
-	    public void Select_Active_Status_Type_then_display_only_active_records_in_table() {
+	    public void Select_Active_Status_Type_then_display_only_active_records_in_table() throws InterruptedException {
 	    Select sel_merchant=new Select(dr.findElement(Status_field));
 	    sel_merchant.selectByVisibleText("Active");
+	    Thread.sleep(5000);
 		String Selected_Dropdown_text=sel_merchant.getFirstSelectedOption().getText();
 		String expected_value_in_table=dr.findElement(status_result).getText();
 		System.out.println("Slected option Text displayed in Status dropdown :"+Selected_Dropdown_text);
@@ -366,7 +367,7 @@ public class Admin_Merchants_Reastaurant_Page_Testcases extends Admin_Merchants_
 	    Select sel=new Select(dr.findElement(search_columnname_field));
 	    String Actual_text_in_search_columnname_field=sel.getFirstSelectedOption().getText();
 	    //System.out.println("Placeholder of Search columnname field :"+Actual_text_in_search_columnname_field+":");
-		String expected_text_in_search_columnname_field="Select a Column Name";
+		String expected_text_in_search_columnname_field="Select Column Name";
 		//System.out.println("Default Text displayed in Search :"+Actual_text_in_search_columnname_field);
 		Assert.assertEquals(Actual_text_in_search_columnname_field,expected_text_in_search_columnname_field);
 	    }
@@ -405,7 +406,7 @@ public class Admin_Merchants_Reastaurant_Page_Testcases extends Admin_Merchants_
 	    
 	    }
 	    
-	    
+	    /*
 	  //Check search functionality for contact person option
 	    @Test(priority =33)
 	    public void Check_search_functionality_for_contact_person_option() throws InterruptedException {
@@ -434,9 +435,8 @@ public class Admin_Merchants_Reastaurant_Page_Testcases extends Admin_Merchants_
 	    dr.findElement(Search_button).click();
 	    Thread.sleep(5000);
 	    String Expect=dr.findElement(contactno_result_after_apply_search).getText();
-	    Assert.assertEquals(input_in_search, Expect);
-	    
-	    }
+	    Assert.assertEquals(input_in_search, Expect);	    
+	    }  */
 	    
 	  //Check search functionality for Referral Code option
 	    @Test(priority =35)
@@ -549,7 +549,7 @@ public class Admin_Merchants_Reastaurant_Page_Testcases extends Admin_Merchants_
 			//select cloumn name field
 		    Select sel_col1=new Select(dr.findElement(search_columnname_field));
 		    String actual_text_in_columnname=sel_col1.getFirstSelectedOption().getText();
-			String expected_text_in_columnname="Select a Column Name";
+			String expected_text_in_columnname="Select Column Name";
 			Assert.assertEquals(actual_text_in_columnname,expected_text_in_columnname);
 	    	
 	    }

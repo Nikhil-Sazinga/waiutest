@@ -9,7 +9,7 @@ public class Testbase2 {
 	
 	
 	protected WebDriver dr;
-    public String url="https://portal-dev.waiu.co.in/"; 
+    public String url="https://portal-dev.waiu.co.in/";
     public String printOpTextFile="No"; 
     
     
@@ -46,7 +46,7 @@ public class Testbase2 {
     
     
     @AfterTest
-    public void teardow() {
+    public void teardown() {
    	// dr.close();
     }
 
